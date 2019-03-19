@@ -74,6 +74,8 @@ env:
     CHART_URL:
     # allow anonymous GET operations when auth is used
     AUTH_ANONYMOUS_GET: false
+    # use bearer/token authentication
+    BEARER_AUTH: false
     # sets the base context path
     CONTEXT_PATH:
     # parallel scan limit for the repo indexer
@@ -91,6 +93,10 @@ env:
     BASIC_AUTH_USER:
     # password for basic http authentication
     BASIC_AUTH_PASS:
+    # authorization server URL
+    AUTH_REALM:
+    # authorization server service name
+    AUTH_SERVICE:
     # GCP service account json file
     GOOGLE_CREDENTIALS_JSON:
     # Redis requirepass server configuration
@@ -249,3 +255,11 @@ oracle:
     config: config
     # Secret key that holds the oci private key
     key_file: key_file
+
+# Name of an existing secret with keys that are not to be set in the environment.
+existingSecret:
+
+# Secret with keys that are not to be set in the environment.
+secret:
+  # authorization server public pem certificate
+  AUTH_CERT:

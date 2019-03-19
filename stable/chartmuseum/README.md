@@ -124,6 +124,7 @@ their default values. See values.yaml for all available options.
 | `env.open.ALLOW_OVERWRITE`             | Allow chart versions to be re-uploaded      | `false`                                             |
 | `env.open.CHART_URL`                   | Absolute url for .tgzs in index.yaml        | ``                                                  |
 | `env.open.AUTH_ANONYMOUS_GET`          | Allow anon GET operations when auth is used | `false`                                             |
+| `env.open.BEARER_AUTH`                 | Use Bearer/Token authentication             | `false`                                             |
 | `env.open.CONTEXT_PATH`                | Set the base context path                   | ``                                                  |
 | `env.open.INDEX_LIMIT`                 | Parallel scan limit for the repo indexer    | ``                                                  |
 | `env.open.CACHE`                       | Cache store, can be one of: redis           | ``                                                  |
@@ -133,8 +134,14 @@ their default values. See values.yaml for all available options.
 | `env.existingSecret`                   | Name of the existing secret use values      | ``                                                  |
 | `env.existingSecret.BASIC_AUTH_USER`   | Key name in the secret for the Username     | ``                                                  |
 | `env.existingSecret.BASIC_AUTH_PASS`   | Key name in the secret for the Password     | ``                                                  |
+| `env.existingSecret.AUTH_REALM`        | Key name in the secret for the auth server URL             | ``                                                  |
+| `env.existingSecret.AUTH_SERVICE`      | Key name in the secret for the auth server service name    | ``                                                  |
+| `existingSecret.AUTH_CERT`             | Key name in the secret for the auth server public pem cert | ``                                                  |
 | `env.secret.BASIC_AUTH_USER`           | Username for basic HTTP authentication      | ``                                                  |
 | `env.secret.BASIC_AUTH_PASS`           | Password for basic HTTP authentication      | ``                                                  |
+| `env.secret.AUTH_REALM`                | Authorization server URL                    | ``                                                  |
+| `env.secret.AUTH_SERVICE`              | Authorization server service name           | ``                                                  |
+| `secret.AUTH_CERT`                     | Authorization server public pem certificate | ``                                                  |
 | `env.secret.CACHE_REDIS_PASSWORD`      | Redis requirepass server configuration      | ``                                                  |
 | `gcp.secret.enabled`                   | Flag for the GCP service account            | `false`                                             |
 | `gcp.secret.name`                      | Secret name for the GCP json file           | ``                                                  |
